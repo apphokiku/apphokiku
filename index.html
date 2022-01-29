@@ -10,6 +10,38 @@
   <link rel="stylesheet" href="dist/css/brights.min.css">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" integrity="sha384-Mujw/rYMLaAmNKgBlyiHh/Vc+p4UU7I/lfQl/X4pICrFJguheK7vZjZmZyTix1HM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <style>
+.mbw-back-to-top {
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+    text-decoration: none;
+    display: none;
+    cursor:pointer;
+    width: 40px;
+}
+</style>
+<img class="mbw-back-to-top" src="http://4.bp.blogspot.com/-y2BIm2-mphA/UQLlFFt1-MI/AAAAAAAAAXo/lXvFBVnpLjc/s1600/Back-To-Top.png" />
+<script type="text/javascript">
+/*****mybloggersworld.com***/
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.mbw-back-to-top').fadeIn(duration);
+        } else { //www.mybloggersworld.com
+            jQuery('.mbw-back-to-top').fadeOut(duration);
+        }
+    });
+ 
+    jQuery('.mbw-back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg nav-light bg-navy">
